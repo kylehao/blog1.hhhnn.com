@@ -1,31 +1,35 @@
-# Idea files
-.idea/*
 
-# Mac files
-.DS_Store
+# Created by https://www.gitignore.io/api/macos
 
-# Byte-compiled / optimized / DLL files
-*.manifest
-*.spec
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
 
-# Jekyll dev or build files
-_site/*
-_development_tool/*
-.sass-cache/*
-*.css.map
-*.scssc
-.bundle/*
+# Icon must end with two \r
+Icon
 
-# Theme Gem files
-Gemfile.lock
-*.gem
-.gems
-jekyll-theme-type-on-strap.gemspec
 
-# Node js files
-**/node_modules/*
-*-test.md
-*copy.md
-.jekyll-cache/*
-test/*
-assets/package-lock.json
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# End of https://www.gitignore.io/api/macos
+
+# debug file
+_site

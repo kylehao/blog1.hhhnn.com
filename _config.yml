@@ -1,48 +1,138 @@
-# SITE CONFIGURATION
-baseurl: "/"
-url: "https://blog.8f.pw"
+# Site settings
+title: 听松阁
+SEOTitle: 听松阁 | Blog.4Y.GS
+header-img: img/post-bg-desk.jpg
+email: info@4y.gs
+description: "枕边听松语，槛外看潮生。"
+keyword: "BY, BY Blog, 听松阁, blog.4y.gs, 美文, 古典诗词"
+url: "http://blog.4y.gs"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/kylehao/blog.4y.gs.git" # you code repository
 
-# THEME-SPECIFIC CONFIGURATION
-title: 听松阁                                   # site's title
-description: "枕上听松语，槛外看潮生。"      # used by search engines
-avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
-favicon: assets/favicon.ico                             # Icon displayed in the tab
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Goals determine what you going to be!"
+sidebar-avatar: ../img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
-# Header and footer text
-header_text: 枕上听松语，槛外看潮生。  # Change Blog header text
-header_feature_image: img/top1.jpg
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-# Blog
-excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
-post_navigation: true
-color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
-# Features
-katex: true                                             # Enable if using math markup
-google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
-cookie_consent: false                                   # To respect the usage of cookies
-disqus_shortname:                                       # Your discus shortname for comments
-layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
-footer_icons:                                           # In _data/social.yml
-share_buttons:                                          # In _data/social.yml
-authors:                                                # In _data/authors.yml
-language:                                               # In _data/language.yml
+# SNS settings
+RSS: false
+# weibo_username:     qiubaiying
+zhihu_username:     
+github_username:    
+facebook_username:  
+jianshu_username:   
+#twitter_username:   
 
-# PAGINATION
-paginate: 10
-paginate_path: "/blog/page:num"
 
-# PORTFOLIO
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/:name
 
-# BUILD SETTINGS
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
-exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules"]
 
-# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
-remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty
+paginate: 30
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# 评论系统
+# Disqus（https://disqus.com/）
+# disqus_username: qiubaiying
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: fe1f9391b962be96b6a9                            #生成的clientID
+  clientSecret: ba788ca5f4cfb65e15cffd815b5147b6770fb779    #生成的clientSecret
+  repo: blog.4y.gs_gitslk    #仓库名称
+  owner: kylehao    #github用户名
+  admin: kylehao
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+# 统计
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: b50bf2b12b5338a1845e33832976fd68
+
+# Google Analytics
+ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "诗词",
+        href: "https://www.free163.com"
+    },{
+        title: "相册",
+        href: "https://photo.free163.com/"
+    },{
+        title: "博客",
+        href: "https://blog.free163.com/"
+    },{
+        title: "电影",
+        href: "https://dy.free163.com/"
+    },{
+        title: "下载",
+        href: "https://down.free163.com/"
+    },{
+        title: "音乐",
+        href: "https://mp3.free163.com/"
+    },{
+        title: "网盘",
+        href: "https://pan.free163.com/"
+    },{
+        title: "邮局",
+        href: "https://mail.free163.com/"
+    },{
+        title: "德云社",
+        href: "http://dys.orgx.gq/"
+    },{
+        title: "谦道",
+        href: "http://dys.orgx.gq/qd/"
+    },{
+        title: "郭论",
+        href: "http://dys.orgx.gq/gl/"
+    },{
+        title: "农场",
+        href: "https://my.4y.gs/"
+    }
+]

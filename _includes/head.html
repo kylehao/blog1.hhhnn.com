@@ -22,18 +22,18 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "../css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "{{ site.baseurl }}/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "../css/hux-blog.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "{{ site.baseurl }}/css/hux-blog.min.css" | prepend: site.baseurl }}">
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "../css/syntax.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "{{ site.baseurl }}/css/syntax.css" | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
     <!-- <link href="../4y/1/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="../4y/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ site.baseurl }}/4y/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
     <!-- Hux Delete, sad but pending in China
